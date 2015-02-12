@@ -16,6 +16,7 @@ TOR_TAG=master
 TORLAUNCHER_TAG=master
 TORBUTTON_TAG=master
 HTTPSE_TAG=master
+TOR_BROWSER_THEME_TAG=c0e3f33efb703817060a94c49db0746b37f5d942 # current tip of the tree
 NSIS_TAG=v0.2
 ZLIB_TAG=v1.2.8
 LIBEVENT_TAG=release-2.0.21-stable

@@ -28,6 +28,8 @@ remotes:
   "dir": "libdmg-hfsplus"
 - "url": "https://git.torproject.org/pluggable-transports/meek.git"
   "dir": "meek"
+- "url": "https://github.com/dwt/tor-browser-improved-distinction-theme"
+  "dir": "tor-browser-theme"
 files:
 # TODO: Can we use an env for this file+version??
 - "tor-browser-mac64-gbuilt.zip"
@@ -101,6 +103,16 @@ script: |
   cd pkg/tmp
   unzip ../*.xpi
   ~/build/dzip.sh ../../../$TORBROWSER_NAME.app/TorBrowser/Data/Browser/profile.default/extensions/torbutton@torproject.org.xpi .
+  cd ../../../
+  #
+  cd tor-browser-theme
+  make
+  cd dist
+  tor_browser_theme_xpi_name=$(ls *.xpi)
+  mkdir -p tmp
+  cd tmp
+  unzip ../*.xpi
+  ~/build/dzip.sh ../../../$TORBROWSER_NAME.app/TorBrowser/Data/Browser/profile.default/extensions/$tor_browser_theme_xpi_name .
   cd ../../../
   #
   # cd https-everywhere

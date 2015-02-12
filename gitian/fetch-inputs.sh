@@ -168,6 +168,7 @@ done
 for i in GOCRYPTO GONET
 do
   PACKAGE="${i}_PACKAGE"
+  echo $PACKAGE
   URL="${MIRROR_URL_YAWNING}${!PACKAGE}"
   get "${!PACKAGE}" "${MIRROR_URL_YAWNING}${!PACKAGE}"
 done
@@ -253,6 +254,7 @@ zlib                  https://github.com/madler/zlib.git       $ZLIB_TAG
 libevent              https://github.com/libevent/libevent.git $LIBEVENT_TAG
 tor                   https://git.torproject.org/tor.git              $TOR_TAG
 https-everywhere      https://git.torproject.org/https-everywhere.git $HTTPSE_TAG
+tor-browser-theme     https://github.com/dwt/tor-browser-improved-distinction-theme.git $TOR_BROWSER_THEME_TAG
 torbutton             https://git.torproject.org/torbutton.git            $TORBUTTON_TAG
 tor-launcher          https://git.torproject.org/tor-launcher.git         $TORLAUNCHER_TAG
 tor-browser           https://git.torproject.org/tor-browser.git          $TORBROWSER_TAG
